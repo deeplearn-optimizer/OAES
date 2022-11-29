@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Table
@@ -20,15 +21,19 @@ public class Test {
     private Exam exam;
 
     @Column
+    @NotNull
     private String answerKey;
 
     @Column
+    @NotNull
     private float negative_marking;
 
     @Column
+    @NotNull
     private String name;
 
     @Column
+    @NotNull
     private String date;
 
     private Test(int test_id, Exam exam, String answerKey, float negative_marking, String name, String date) {

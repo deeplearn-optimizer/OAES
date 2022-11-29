@@ -1,6 +1,7 @@
 package com.example.org.bean;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Table
 @Entity
@@ -37,9 +38,11 @@ public class Users {
     private String username;
 
     @Column
+    @NotNull
     private String password;
 
     @Column
+    @NotNull
     private String role;
 
     private Users(int user_id, String username, String password, String role) {

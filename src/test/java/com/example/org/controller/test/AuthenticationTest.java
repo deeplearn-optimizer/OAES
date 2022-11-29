@@ -110,4 +110,20 @@ public class AuthenticationTest {
         Assert.assertEquals(response, "200 OK");
 
     }
+
+    @Test
+    public void testWithUsernameEmpty() throws Exception {
+
+        /* register a mock user */
+        String url = "http://localhost:8080/REST_example/api/users/register?";
+        String params = "username=" + username;
+        params += "&password=" + password;
+        params += "&role=" + "student";
+        url += params;
+        String response = get_response_from(url);
+        Assert.assertEquals(response, "200 OK");
+
+
+
+    }
 }

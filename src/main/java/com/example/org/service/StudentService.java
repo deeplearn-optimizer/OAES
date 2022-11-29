@@ -88,9 +88,4 @@ public class StudentService {
         return n;
     }
 
-//    public String myProfile(int id){
-//        Student student = getStudentById(id);
-//
-//        return n;
-//    }
 }
